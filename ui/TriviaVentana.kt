@@ -6,6 +6,7 @@ import java.awt.GridLayout
 import javax.swing.JButton
 import javax.swing.JFrame
 import javax.swing.JLabel
+import javax.swing.JOptionPane
 import javax.swing.JPanel
 import javax.swing.SwingConstants
 
@@ -43,12 +44,36 @@ class TriviaVentana : JFrame("Trivia de Disney") {
         val preguntaActual = preguntas[indicePregunta]
         etiquetaPregunta.text = "Pregunta ${indicePregunta + 1}: ${preguntaActual.texto}"
 
-        preguntaActual.opciones.forEachIndexed { _, opcion ->
+        preguntaActual.opciones.forEachIndexed { index, opcion ->
             val boton = JButton(opcion)
+
+            boton.addActionListener {
+                validarRespuesta(index + 1)
+            }
+
             panelOpciones.add(boton)
         }
 
         panelOpciones.revalidate()
         panelOpciones.repaint()
+    }
+
+    private fun validarRespuesta(respuestaUsuario: Int) {
+        val preguntaActual = preguntas[indicePregunta]
+
+        if (respuestaUsuario == preguntaActual.respuestaCorrecta) {
+            puntaje++
+            JOptionPane.showMessageDialog(this, "Respuesta correcta")
+        } else {
+            val correcta = preguntaActual.opciones[preguntaActual.respuestaCorrecta - 1]
+            JOptionPane.showMessageDialog(
+                this,
+                "Respuesta incorrecta. La respuesta correcta era: $correcta"
+            )
+        }
+
+        indicePregunta++
+        etiquetaPuntaje.text = "Puntaje: $puntaje"
+        mostrarPregunta()
     }
 }
