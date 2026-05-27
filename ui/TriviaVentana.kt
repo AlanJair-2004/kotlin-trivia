@@ -79,26 +79,38 @@ class TriviaVentana : JFrame("Trivia de Disney") {
     }
 
     private fun mostrarResultadoFinal() {
-        val porcentaje = (puntaje * 100) / preguntas.size
+    val porcentaje = (puntaje * 100) / preguntas.size
 
-        val mensaje = when {
-            porcentaje == 100 -> "Excelente. Eres experto en Disney."
-            porcentaje >= 70 -> "Muy bien. Sabes bastante de Disney."
-            porcentaje >= 50 -> "Bien. Puedes mejorar un poco más."
-            else -> "Necesitas practicar más."
-        }
+    val mensaje = when {
+        porcentaje == 100 -> "Excelente. Eres experto en Disney."
+        porcentaje >= 70 -> "Muy bien. Sabes bastante de Disney."
+        porcentaje >= 50 -> "Bien. Puedes mejorar un poco más."
+        else -> "Necesitas practicar más."
+    }
 
-        val resultado = Resultado(
-            puntaje = puntaje,
-            totalPreguntas = preguntas.size,
-            mensaje = mensaje
-        )
+    val resultado = Resultado(
+        puntaje = puntaje,
+        totalPreguntas = preguntas.size,
+        mensaje = mensaje
+    )
 
-        JOptionPane.showMessageDialog(
-            this,
-            "Trivia terminada\nPuntaje final: ${resultado.puntaje}/${resultado.totalPreguntas}\n${resultado.mensaje}"
-        )
+    val opcion = JOptionPane.showConfirmDialog(
+        this,
+        "Trivia terminada\nPuntaje final: ${resultado.puntaje}/${resultado.totalPreguntas}\n${resultado.mensaje}\n\n¿Quieres jugar otra vez?",
+        "Resultado final",
+        JOptionPane.YES_NO_OPTION
+    )
 
+    if (opcion == JOptionPane.YES_OPTION) {
+        reiniciarTrivia()
+    } else {
         dispose()
     }
+}
+private fun reiniciarTrivia() {
+    indicePregunta = 0
+    puntaje = 0
+    etiquetaPuntaje.text = "Puntaje: 0"
+    mostrarPregunta()
+}
 }
