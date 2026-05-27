@@ -2,7 +2,7 @@ Trivia de Disney en Kotlin
 
 Descripción breve
 
-Este proyecto es una aplicación de consola desarrollada en Kotlin donde el usuario responde una trivia de preguntas relacionadas con películas y personajes de Disney. El programa valida las respuestas, calcula el puntaje obtenido y muestra el resultado final del jugador.
+Este proyecto es una aplicación desarrollada en Kotlin donde el usuario responde una trivia de preguntas relacionadas con películas y personajes de Disney. El programa valida las respuestas, calcula el puntaje obtenido y muestra el resultado final del jugador.
 
 Instrucciones de instalación y ejecución
 
