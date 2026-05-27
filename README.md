@@ -61,16 +61,16 @@ Reflexión de proceso
 
 a) ¿Qué fue lo más difícil de este proyecto y cómo lo resolviste?
 
-Lo más difícil de este proyecto fue organizar correctamente la lógica de las preguntas y respuestas para que el programa funcionara de manera ordenada. Al principio tenía problemas porque todas las instrucciones estaban juntas y era complicado identificar errores. Para solucionarlo dividí el programa en varias funciones, separando el menú, las preguntas y el cálculo del puntaje. Esto ayudó a que el código fuera más limpio, más fácil de entender y más sencillo de modificar.
+Lo más difícil de este proyecto fue organizar correctamente la lógica de las preguntas y respuestas para que el programa funcionara de manera ordenada. Al principio tenía problemas porque todas las instrucciones estaban juntas y era complicado identificar errores. Para solucionarlo dividímos el programa en varias funciones, separando el menú, las preguntas y el cálculo del puntaje. Esto ayudó a que el código fuera más limpio, más fácil de entender y más sencillo de modificar.
 
 b) ¿Hubo algún concepto de Kotlin que al principio no entendías y que ahora sí comprendes? ¿Cómo llegaste a entenderlo?
 
-Uno de los conceptos que más me costó comprender fue el manejo de null safety. Al inicio no entendía bien por qué Kotlin utilizaba operadores como `?.` y `?:`, pero mientras desarrollaba el proyecto entendí que sirven para evitar errores cuando el usuario ingresa datos incorrectos o vacíos. Practicando con `readLine()?.toIntOrNull()` pude comprender mejor cómo validar entradas de manera segura sin que el programa se cerrara inesperadamente.
+Uno de los conceptos que nos costó comprender fue el manejo de null safety. Al inicio no entendíamos bien por qué Kotlin utilizaba operadores como `?.` y `?:`, pero mientras desarrollabamos el proyecto entendímos que sirven para evitar errores cuando el usuario ingresa datos incorrectos o vacíos. Practicando con `readLine()?.toIntOrNull()` pudimos comprender mejor cómo validar entradas de manera segura sin que el programa se cerrara inesperadamente.
 
 c) Si tuvieras que mejorar o ampliar este proyecto, ¿qué le agregarías y por qué?
 
-Si tuviera que ampliar este proyecto, me gustaría agregar diferentes niveles de dificultad, categorías específicas de películas y un sistema para guardar puntajes en archivos. También sería interesante incluir temporizadores para responder cada pregunta y agregar más preguntas aleatorias para que la trivia cambie cada vez que se juegue. Esto haría que el juego fuera más dinámico, entretenido y completo.
+Si tuvieramos que ampliar este proyecto, nos gustaría agregar diferentes niveles de dificultad, categorías específicas de películas y un sistema para guardar puntajes en archivos. También sería interesante incluir temporizadores para responder cada pregunta y agregar más preguntas aleatorias para que la trivia cambie cada vez que se juegue. Esto haría que el juego fuera más dinámico, entretenido y completo.
 
 d) ¿Qué aprendiste de este proyecto que no aprendiste solo leyendo o viendo videos?
 
-Aprendí que desarrollar un proyecto completo ayuda mucho más a comprender la programación que solamente leer teoría o ver ejemplos pequeños. Durante este proyecto entendí mejor cómo conectar diferentes conceptos como funciones, ciclos, colecciones y validaciones dentro de una sola aplicación funcional. También aprendí la importancia de organizar el código correctamente y probar constantemente el programa para detectar errores y mejorar su funcionamiento.
+Aprendímos que desarrollar un proyecto completo ayuda mucho más a comprender la programación que solamente leer teoría o ver ejemplos pequeños. Durante este proyecto entendímos mejor cómo conectar diferentes conceptos como funciones, ciclos, colecciones y validaciones dentro de una sola aplicación funcional. También aprendímos la importancia de organizar el código correctamente y probar constantemente el programa para detectar errores y mejorar su funcionamiento.
