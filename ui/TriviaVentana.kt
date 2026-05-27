@@ -9,6 +9,7 @@ import javax.swing.JLabel
 import javax.swing.JOptionPane
 import javax.swing.JPanel
 import javax.swing.SwingConstants
+import models.Resultado
 
 class TriviaVentana : JFrame("Trivia de Disney") {
 
@@ -87,9 +88,15 @@ class TriviaVentana : JFrame("Trivia de Disney") {
             else -> "Necesitas practicar más."
         }
 
+        val resultado = Resultado(
+            puntaje = puntaje,
+            totalPreguntas = preguntas.size,
+            mensaje = mensaje
+        )
+
         JOptionPane.showMessageDialog(
             this,
-            "Trivia terminada\nPuntaje final: $puntaje/${preguntas.size}\n$mensaje"
+            "Trivia terminada\nPuntaje final: ${resultado.puntaje}/${resultado.totalPreguntas}\n${resultado.mensaje}"
         )
 
         dispose()
