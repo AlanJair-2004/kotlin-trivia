@@ -37,7 +37,7 @@ class TriviaVentana : JFrame("Trivia de Disney") {
         panelOpciones.removeAll()
 
         if (indicePregunta >= preguntas.size) {
-            etiquetaPregunta.text = "Trivia terminada"
+            mostrarResultadoFinal()
             return
         }
 
@@ -75,5 +75,23 @@ class TriviaVentana : JFrame("Trivia de Disney") {
         indicePregunta++
         etiquetaPuntaje.text = "Puntaje: $puntaje"
         mostrarPregunta()
+    }
+
+    private fun mostrarResultadoFinal() {
+        val porcentaje = (puntaje * 100) / preguntas.size
+
+        val mensaje = when {
+            porcentaje == 100 -> "Excelente. Eres experto en Disney."
+            porcentaje >= 70 -> "Muy bien. Sabes bastante de Disney."
+            porcentaje >= 50 -> "Bien. Puedes mejorar un poco más."
+            else -> "Necesitas practicar más."
+        }
+
+        JOptionPane.showMessageDialog(
+            this,
+            "Trivia terminada\nPuntaje final: $puntaje/${preguntas.size}\n$mensaje"
+        )
+
+        dispose()
     }
 }
