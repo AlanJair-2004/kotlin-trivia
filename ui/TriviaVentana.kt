@@ -10,6 +10,8 @@ import javax.swing.JOptionPane
 import javax.swing.JPanel
 import javax.swing.SwingConstants
 import models.Resultado
+import java.awt.Font
+import java.awt.Color
 
 class TriviaVentana : JFrame("Trivia de Disney") {
 
@@ -30,6 +32,10 @@ class TriviaVentana : JFrame("Trivia de Disney") {
         add(etiquetaPregunta, BorderLayout.NORTH)
         add(panelOpciones, BorderLayout.CENTER)
         add(etiquetaPuntaje, BorderLayout.SOUTH)
+
+        etiquetaPregunta.font = Font("Arial", Font.BOLD, 16)
+        etiquetaPuntaje.font = Font("Arial", Font.PLAIN, 14)
+        panelOpciones.background = Color(245, 245, 255)
 
         mostrarPregunta()
     }
