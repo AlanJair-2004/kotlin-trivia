@@ -34,7 +34,7 @@ java -jar trivia.jar
 
 Funcionalidades principales
 
-- Menú interactivo en consola.
+- Menú interactivo
 - Preguntas de trivia sobre Disney.
 - Opciones múltiples de respuesta.
 - Validación automática de respuestas.
